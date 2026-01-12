@@ -2,6 +2,19 @@
 
 A modern, beautiful, and user-friendly e-commerce platform built with Next.js 14, TypeScript, and Tailwind CSS. This application supports order placement and tracking with dedicated dashboards for Admin, Reseller, and Client roles.
 
+## 🚀 Quick Start
+
+**Just want to see the app?**
+
+```bash
+npm install
+npm run dev
+```
+
+Then open **http://localhost:3000** in your browser!
+
+> **Note**: The homepage works without database setup. For full features (authentication, orders, etc.), see the [Getting Started](#getting-started) section below.
+
 ## Features
 
 ### Public Storefront
