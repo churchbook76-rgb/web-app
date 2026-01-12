@@ -6,26 +6,42 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "db:generate": "prisma generate",
+    "db:push": "prisma db push",
+    "db:seed": "ts-node --compiler-options {\\\"module\\\":\\\"commonjs\\\"} prisma/seed.ts",
+    "db:studio": "prisma studio"
+  },
+  "prisma": {
+    "seed": "ts-node --compiler-options {\\\"module\\\":\\\"commonjs\\\"} prisma/seed.ts"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "description": "Modern E-Commerce Web Application with Admin, Reseller, and Client dashboards",
   "dependencies": {
+    "@prisma/client": "^7.2.0",
     "@types/node": "^25.0.6",
     "@types/react": "^19.2.8",
     "@types/react-dom": "^19.2.3",
+    "bcryptjs": "^3.0.3",
+    "clsx": "^2.1.1",
+    "jsonwebtoken": "^9.0.3",
     "next": "^16.1.1",
     "react": "^19.2.3",
     "react-dom": "^19.2.3",
+    "tailwind-merge": "^3.4.0",
     "typescript": "^5.9.3"
   },
   "devDependencies": {
     "@tailwindcss/forms": "^0.5.11",
     "@tailwindcss/typography": "^0.5.19",
+    "@types/bcryptjs": "^2.4.6",
+    "@types/jsonwebtoken": "^9.0.10",
     "autoprefixer": "^10.4.19",
     "postcss": "^8.4.38",
-    "tailwindcss": "^3.4.17"
+    "prisma": "^7.2.0",
+    "tailwindcss": "^3.4.17",
+    "ts-node": "^10.9.2"
   }
 }

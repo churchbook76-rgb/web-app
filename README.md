@@ -37,6 +37,7 @@ A modern, beautiful, and user-friendly e-commerce platform built with Next.js 14
 
 ### Prerequisites
 - Node.js 18+ and npm
+- PostgreSQL database (local or cloud)
 
 ### Installation
 
@@ -51,12 +52,38 @@ cd web-app
 npm install
 ```
 
-3. Run the development server:
+3. Set up environment variables:
+```bash
+cp .env.example .env
+```
+Edit `.env` and add your database URL and other configuration.
+
+4. Generate Prisma client:
+```bash
+npm run db:generate
+```
+
+5. Push database schema (for development):
+```bash
+npm run db:push
+```
+
+6. (Optional) Seed the database with sample data:
+```bash
+npm run db:seed
+```
+
+This creates test users:
+- **Admin**: admin@shophub.com / admin123
+- **Reseller**: reseller@shophub.com / reseller123
+- **Client**: client@shophub.com / client123
+
+7. Run the development server:
 ```bash
 npm run dev
 ```
 
-4. Open [http://localhost:3000](http://localhost:3000) in your browser
+8. Open [http://localhost:3000](http://localhost:3000) in your browser
 
 ## Project Structure
 
@@ -90,6 +117,10 @@ web-app/
 - `npm run build` - Build for production
 - `npm start` - Start production server
 - `npm run lint` - Run ESLint
+- `npm run db:generate` - Generate Prisma client
+- `npm run db:push` - Push schema changes to database
+- `npm run db:seed` - Seed database with sample data
+- `npm run db:studio` - Open Prisma Studio (database GUI)
 
 ## Implementation Roadmap
 
@@ -99,11 +130,15 @@ web-app/
 - [x] Set up project structure
 - [x] Create homepage with modern UI
 
-### 🚧 Phase 2: Database & Auth (In Progress)
-- [ ] Set up Prisma with PostgreSQL
-- [ ] Design database schema
-- [ ] Implement authentication
-- [ ] Create role-based access control
+### ✅ Phase 2: Database Schema & Models (Completed)
+- [x] Design database schema for users (admin, reseller, client)
+- [x] Design database schema for products with variants
+- [x] Design database schema for orders and order items
+- [x] Design database schema for payments (M-Pesa ready)
+- [x] Set up Prisma ORM with PostgreSQL
+- [x] Create utility functions for database operations
+- [x] Create authentication utilities (JWT, password hashing)
+- [x] Add database seeding script for development
 
 ### 📋 Phase 3: Core Features (Planned)
 - [ ] Product catalog and filtering
