@@ -4,6 +4,7 @@ const globalForPrisma = globalThis as unknown as {
   prisma: PrismaClient | undefined
 }
 
+// For Prisma 7, the database URL is configured in the environment
 export const prisma =
   globalForPrisma.prisma ??
   new PrismaClient({

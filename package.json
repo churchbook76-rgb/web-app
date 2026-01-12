@@ -9,11 +9,11 @@
     "lint": "next lint",
     "db:generate": "prisma generate",
     "db:push": "prisma db push",
-    "db:seed": "ts-node --compiler-options {\\\"module\\\":\\\"commonjs\\\"} prisma/seed.ts",
+    "db:seed": "ts-node -P prisma/tsconfig.json prisma/seed.ts",
     "db:studio": "prisma studio"
   },
   "prisma": {
-    "seed": "ts-node --compiler-options {\\\"module\\\":\\\"commonjs\\\"} prisma/seed.ts"
+    "seed": "ts-node -P prisma/tsconfig.json prisma/seed.ts"
   },
   "keywords": [],
   "author": "",
