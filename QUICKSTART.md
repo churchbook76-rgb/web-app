@@ -12,7 +12,15 @@ npm install
 
 This will install all required packages.
 
-### Step 2: Start the Development Server
+### Step 2: Generate Prisma Client
+
+```bash
+npm run db:generate
+```
+
+This generates the Prisma client needed for TypeScript types and database operations.
+
+### Step 3: Start the Development Server
 
 ```bash
 npm run dev
@@ -29,7 +37,7 @@ You should see output like:
 ✓ Ready in 2.3s
 ```
 
-### Step 3: Open in Browser
+### Step 4: Open in Browser
 
 Navigate to **http://localhost:3000** in your browser to see the homepage.
 

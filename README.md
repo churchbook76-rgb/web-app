@@ -8,6 +8,7 @@ A modern, beautiful, and user-friendly e-commerce platform built with Next.js 14
 
 ```bash
 npm install
+npm run db:generate
 npm run dev
 ```
 
